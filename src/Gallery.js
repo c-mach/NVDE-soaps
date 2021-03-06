@@ -1,5 +1,5 @@
 const Gallery = (props) => {
-    const { soapName, ingredients, price, picture } = props;
+    const { soapName, ingredients, price, picture, amountInCart, addToCart } = props;
     return (
         <ul>
             <li>
@@ -9,6 +9,7 @@ const Gallery = (props) => {
                 <div className="text-container">
                     <p>{soapName} {price}</p>
                     <p>{ingredients.join(", ")}</p>
+                    <button onClick={addToCart({amountInCart})}>Add to Cart!</button>
                 </div>
             </li>            
         </ul>

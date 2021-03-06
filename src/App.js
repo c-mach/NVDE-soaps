@@ -62,21 +62,37 @@ function App() {
     })     
   },[]);
 
+  const handleClick = (amount) => {
+    
+    //when add button is clicked 
+    //update inCart prop to + 1
+
+    let soapAmount = amount;
+    soapAmount = soapAmount++;
+
+      // dbRef.update({
+      //   inCart: soapAmount
+      // })
+    }
+  }
+
   return (
     <div className="App">
       <Header />
-      
+
     {
       soapProducts.map((item, index) => {
-        console.log(item, 'item');
         return (
           <Gallery 
-            soapName={item.name}
+            key={index} 
             ingredients={item.ingredients}
-            purchased={item.inCart}
-            price={item.soap}
+            soapName={item.name}
             picture={item.image}
-            key={index} />
+            price={item.soap}
+
+            amountInCart={item.inCart}
+            addToCart={() => handleClick()}
+          />
         )
       })
     }
