@@ -1,7 +1,12 @@
 const Header = () => {
     return (
         <header>
-            <h1>NVDE Soaps</h1>
+            <nav>
+            
+            </nav>
+            <h1>nvde</h1>
+            <p>/n(y)o͞od/</p>
+            <p>organic handcrafted soaps</p>
         </header>
     )
 }
