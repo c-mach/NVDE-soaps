@@ -1,0 +1,34 @@
+@import 'setup';
+
+// stripping styles
+
+body,
+ul,
+li,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+// general styles
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+// header starts
+
+header {
+  background-color: #ffb4a2;
+  outline: 1px red solid;
+  height: 80vh;
+  margin-top: 0;
+
+
+}
