@@ -94,7 +94,7 @@ function App() {
                   soapName={item.name}
                   soapTitle={item.title}
                   picture={item.image}
-                  price={item.soap}
+                  price={item.price}
 
                   amountInCart={item.inCart}
                   addToCart={handleClick}
