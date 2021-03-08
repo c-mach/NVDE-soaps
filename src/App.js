@@ -21,7 +21,7 @@ function App() {
     //       title: 'Sage + Olive Oil',
     //       price: 10,
     //       ingredients: ['organic olive oil', 'organic coconut oil', 'clary sage essential oil', 'shea butter', 'love'],
-    //       image: 'http://placekitten.com/g/200/250',
+    //       image: 'https://res.cloudinary.com/dhcw51nyl/image/upload/c_scale,h_250/v1615232522/IMG_8175_feevt4.jpg',
     //       inCart: 0
     //     },
     //     soap2: {
@@ -29,7 +29,7 @@ function App() {
     //       title: 'Rose Petal + Hibiscus Tea',
     //       price: 10,
     //       ingredients: ['organic olive oil', 'organic coconut oil', 'rose petals', 'lemon zest', 'hibiscus tea', 'love'],
-    //       image: 'http://placekitten.com/g/200/250',
+    //       image: 'https://res.cloudinary.com/dhcw51nyl/image/upload/c_scale,h_250/v1615232522/IMG_8174_fjwh1s.jpg',
     //       inCart: 0
     //     },
     //     soap3: {
@@ -37,7 +37,7 @@ function App() {
     //       title: 'Earl Grey Tea + Shea Butter',
     //       price: 10,
     //       ingredients: ['organic olive oil', 'organic coconut oil', 'earl grey tea', 'castor oil', 'palm oil', 'shea butter', 'love'],
-    //       image: 'http://placekitten.com/g/200/250',
+    //       image: 'https://res.cloudinary.com/dhcw51nyl/image/upload/c_scale,h_250/v1615232522/IMG_8177_a6ww1w.jpg',
     //       inCart: 0
     //     },
     //     soap4: {
@@ -45,7 +45,7 @@ function App() {
     //       title: 'Charcoal + Honey + Milk',
     //       price: 10,
     //       ingredients: ['organic olive oil', 'organic coconut oil', 'honey & milk fragrance', 'charcoal', 'love'],
-    //       image: 'http://placekitten.com/g/200/250',
+    //       image: 'https://res.cloudinary.com/dhcw51nyl/image/upload/c_scale,h_250/v1615232522/IMG_8176_fmgmwf.jpg',
     //       inCart: 0
     //     }
     // };
@@ -112,7 +112,9 @@ function App() {
               )
             })
           }
+          <button className="checkout">check out</button>
         </div>  
+
 
         <div className='shopping-cart'>
           {
