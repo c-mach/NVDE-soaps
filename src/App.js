@@ -94,26 +94,27 @@ function App() {
         <div className='wrapper'>
           <h2>Available Soaps:</h2>
 
-        <div className='soap-container'>
-          {
-            soapProducts.map((item, index) => {
-              return (
-                <Gallery 
-                  key={`${index}-${item.name}`} 
-                  ingredients={item.ingredients}
-                  soapName={item.name}
-                  soapTitle={item.title}
-                  picture={item.image}
-                  price={item.price}
+          <div className='soap-container'>
+            {
+              soapProducts.map((item, index) => {
+                return (
+                  <Gallery 
+                    key={`${index}-${item.name}`} 
+                    ingredients={item.ingredients}
+                    soapName={item.name}
+                    soapTitle={item.title}
+                    picture={item.image}
+                    price={item.price}
 
-                  amountInCart={item.inCart}
-                  addToCart={handleClick}
-                />
-              )
-            })
-          }
-          <button className="checkout">check out</button>
-        </div>  
+                    amountInCart={item.inCart}
+                    addToCart={handleClick}
+                  />
+                )
+              })
+            }
+            <button className="checkout">check out</button>
+          </div>  
+        </div> 
 
 
         <div className='shopping-cart'>
@@ -128,11 +129,10 @@ function App() {
                   price={soapInCart.price}
                   removeFromCart={handleRemove}
                 />
-  
               ))
           }
         </div>
-        </div>
+        
       </main>
       
       <Footer />
