@@ -2,6 +2,7 @@ import './styles/App.scss';
 import firebase from './firebase.js';
 import Header from './Header.js';
 import Gallery from './Gallery.js'; 
+import ShoppingCart from './ShoppingCart.js';
 import Footer from './Footer.js';
 import { useState, useEffect } from 'react';
 
@@ -76,6 +77,16 @@ function App() {
     })
   }
 
+  const handleRemove = (event) => {
+    const selectedSoap = event.target.id;
+    const dbRef = firebase.database().ref(`${selectedSoap}`)
+
+    dbRef.update({
+      inCart: firebase.database.ServerValue.increment(-1)
+    })
+
+  }
+
   return (
     <div className="App">
       <Header />
@@ -103,6 +114,28 @@ function App() {
             })
           }
         </div>  
+        <div className='shopping-cart'>
+          {
+            soapProducts.filter(item => item.inCart > 0)
+              .map((soapInCart, index) => (
+                <ShoppingCart 
+                  soapTitle={soapInCart.title}
+                  amountInCart={soapInCart.inCart}
+                  price={soapInCart.price}
+                  removeFromCart={handleRemove}
+                />
+  
+              ))
+
+          
+
+            // soapProducts.filter((item, index) => {
+            //     (item.inCart > 0) 
+            //     ? <p>{item.title} {item.inCart}</p>
+            //     : null 
+            // })
+          }
+        </div>
         </div>
       </main>
       
