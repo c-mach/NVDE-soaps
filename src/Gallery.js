@@ -1,10 +1,10 @@
 const Gallery = (props) => {
-    const { soapName, ingredients, price, picture, amountInCart, addToCart, soapTitle } = props;
+    const { soapName, ingredients, price, picture, addToCart, soapTitle } = props;
     return (
         <ul>
             <li>
                 <div className="image-container">
-                    <img src={picture} alt="A photo of hand crafted soap."/>
+                    <img src={picture} alt="Hand crafed soap"/>
                 </div>
                 <div className="text-container">
                     <h3>{soapTitle}</h3>
