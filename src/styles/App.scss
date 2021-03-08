@@ -72,7 +72,6 @@ button {
   }
 }
 
-
 // header starts
 
 header {
@@ -103,103 +102,113 @@ header {
 
 main {
   background-color: #ddbeb5;
+} 
 
-  h2 {
-    color: white;
-    text-align: center;
-    font-weight: 600;
-    padding-top: 80px;
+h2 {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  padding-top: 80px;
+}
+
+// gallery component start
+
+.soap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+li.available-soaps {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px;
+  margin: 15px auto;
+  background-color: rgb(248, 237, 235);
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+
+
+  &:hover {
+    box-shadow: 0 0 40px rgba(248, 237, 235, 1);
+  }
+}
+
+.text-container {
+  margin-left: 15px;
+  background-color:  #A75638;
+  padding: 20px 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4.7rem;
+    font-weight: 700;
+    text-transform: lowercase;
   }
 
-  // gallery component start
-
-  .soap-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+  p {
+    padding: 10px 0;
   }
 
-  li.available-soaps {
-    max-width: 900px;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 40px;
-    margin: 15px auto;
-    background-color: rgb(248, 237, 235);
-    border: 1px solid white;
-    border-radius: 10px;
-    transition: box-shadow 0.3s;
-
-
-    &:hover {
-      box-shadow: 0 0 40px rgba(248, 237, 235, 1);
-    }
+  .ingredient-list {
+    width: 75%;
   }
 
-  .text-container {
-    margin-left: 15px;
-    background-color:  #A75638;
-    padding: 20px 30px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-
-    h3 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 4.7rem;
-      font-weight: 700;
-      text-transform: lowercase;
-    }
-
-    p {
-      padding: 10px 0;
-    }
-
-    .ingredient-list {
-      width: 75%;
-    }
-
-    .cost {
-      font-family: 'Shippori Mincho', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-    }
-
-    button {
-      align-self: flex-end;
-    }
+  .cost {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
   }
 
-  // gallery component ends
+  button {
+    align-self: flex-end;
+  }
+}
 
-  .checkout {
-    width: 25%;
-    margin: 15px 0;
+// gallery component ends
+
+.checkout {
+  width: 25%;
+  margin: 15px 0;
+}
+
+// shopping cart component starts
+
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  overflow: hidden;
+  background-color: rgb(204, 146, 132);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 60%;
+  transform: translateX(100%);
+  transition: transform 0.6s ease;
+  padding: 30px;
+
+  &.show-cart {
+    visibility: visible;
+    transform: translateX(0);
   }
 
-  // shopping cart component starts
-
-  .shopping-cart {
-    display: none;
-    overflow: hidden;
-    background-color: rgb(204, 146, 132);
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    height: 100vh;
-    width: 50%;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease;
-
-    &.show-cart {
-      display: block;
-      transform: translateX(0);
-    }
+  .close-cart {
+    align-self: flex-end;
+    width: auto;
+    padding: 5px 8px;
   }
-  
-} // main ends
+}
+
+// main ends
 
 // footer styles
 
