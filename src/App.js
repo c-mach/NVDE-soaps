@@ -10,6 +10,8 @@ import { useState, useEffect } from 'react';
 function App() {
 
   const [ soapProducts, setSoapProducts ] = useState([]);
+
+  const [ displayCart, setDisplayCart ] = useState(false);
   
   useEffect(() => {
 
@@ -86,6 +88,10 @@ function App() {
     })
   }
 
+  const handleToggle = () => {
+    setDisplayCart(!displayCart);
+  }
+
   return (
     <div className="App">
       <Header />
@@ -112,12 +118,12 @@ function App() {
                 )
               })
             }
-            <button className="checkout">check out</button>
+            <button className="checkout" onClick={handleToggle}>check out</button>
           </div>  
         </div> 
 
 
-        <div className='shopping-cart'>
+        <div className={displayCart ? 'shopping-cart show-cart' : 'shopping-cart'}>
           {
             soapProducts.filter(item => item.inCart > 0)
               .map((soapInCart, index) => (
