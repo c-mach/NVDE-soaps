@@ -78,13 +78,12 @@ function App() {
   }
 
   const handleRemove = (event) => {
-    const selectedSoap = event.target.id;
-    const dbRef = firebase.database().ref(`${selectedSoap}`)
+    const removeSoap = (event.target.id)
+    const dbRef = firebase.database().ref(`${removeSoap}`)
 
     dbRef.update({
       inCart: firebase.database.ServerValue.increment(-1)
     })
-
   }
 
   return (
@@ -114,11 +113,14 @@ function App() {
             })
           }
         </div>  
+
         <div className='shopping-cart'>
           {
             soapProducts.filter(item => item.inCart > 0)
               .map((soapInCart, index) => (
                 <ShoppingCart 
+                  key={`${index}-${soapInCart.name}`}
+                  soapName={soapInCart.name}
                   soapTitle={soapInCart.title}
                   amountInCart={soapInCart.inCart}
                   price={soapInCart.price}
@@ -126,14 +128,6 @@ function App() {
                 />
   
               ))
-
-          
-
-            // soapProducts.filter((item, index) => {
-            //     (item.inCart > 0) 
-            //     ? <p>{item.title} {item.inCart}</p>
-            //     : null 
-            // })
           }
         </div>
         </div>

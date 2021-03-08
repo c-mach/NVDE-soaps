@@ -100,7 +100,7 @@ main {
     padding: 10px;
   }
 
-  li {
+  li.available-soaps {
     max-width: 900px;
     display: flex;
     justify-content: space-evenly;
@@ -116,10 +116,6 @@ main {
       box-shadow: 0 0 40px rgba(248, 237, 235, 1);
     }
   }
-
-  // .image-container {
-  //   min-width: calc(40% - 10px);
-  // }
 
   .text-container {
     margin-left: 15px;

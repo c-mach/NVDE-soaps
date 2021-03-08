@@ -6,7 +6,7 @@ const ShoppingCart = ({ soapName, soapTitle, amountInCart, price, removeFromCart
         <ul className='soap-in-cart'>
             <li>
                 <p>{soapTitle} quantity: {amountInCart} total: {totalCost}</p>
-                <button>remove</button>
+                <button onClick={removeFromCart} id={soapName}>remove</button>
             </li>
 
         </ul>
