@@ -3,10 +3,11 @@ const ShoppingCart = ({ soapName, soapTitle, amountInCart, price, removeFromCart
     const totalCost = price * amountInCart;
 
     return (
-        <ul className='soap-in-cart'>
+        <ul>
             <li>
-                <p>{soapTitle} quantity: {amountInCart} total: {totalCost}</p>
-                <button onClick={removeFromCart} id={soapName}>remove</button>
+                <p>{soapTitle}</p>
+                <p> qty: {amountInCart} / sub-total: $ {totalCost}</p>
+                <button onClick={removeFromCart} id={soapName}>x</button>
             </li>
 
         </ul>

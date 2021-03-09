@@ -244,12 +244,89 @@ li.available-soaps {
     padding: 5px 8px;
   }
 
+  .cart-logo {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+    color: white;
+    
+    h3 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 6rem;
+    }
+
+    p {
+      align-self: flex-end;
+      margin-bottom: 10px;
+    }
+
+  }
   
+  
+  .soap-in-cart {  
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+    ul {
+      margin: 15px 0;
+    }
+
+    li {
+      // outline: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 5px;
+      height: 60px;
+      position: relative;
+      background-color: rgb(248, 237, 235);
+
+      em {
+        text-transform: none;
+        font-weight: 700;
+      }
+
+      p:first-child {
+        font-weight: 700;
+        font-size: 2rem;
+      }
+
+      p:nth-of-type(2) {
+        padding: 5px 0;
+      }
+
+      button {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        align-self: flex-end;
+        box-shadow: none;
+        padding: 1px 10px 5px 10px;
+      }
+
+    }
+    .total {
+      border-top: 2px solid white;
+      color: white;
+    }
+
+    .order  {
+      margin-top: 20px;
+      align-self: center;
+      width: 50%;
+
+      a {
+        color: black;
+      }
+    }
+  }
 }
 
 // main ends
 
-// footer styles
+// footer styles starts
 
 footer {
   text-align: center;

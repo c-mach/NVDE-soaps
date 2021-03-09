@@ -61,9 +61,8 @@ function App() {
 
       <main>
         <div className='wrapper'>
-          <h2>Available Soaps:</h2>
-
-          <div className='soap-container'>
+          <section className='soap-container'>
+            <h2>Available Soaps:</h2>
             {
               soapProducts.map((item, index) => {
                 return (
@@ -74,22 +73,23 @@ function App() {
                     soapTitle={item.title}
                     picture={item.image}
                     price={item.price}
-
-                    amountInCart={item.inCart}
                     addToCart={handleClick}
                   />
                 )
               })
             }
             <button className='checkout' onClick={handleToggle}>check out</button>
-          </div>  
+          </section>  
         </div> 
 
         <div className={displayCart ? 'cart-container' : ''}>
           <aside className={displayCart ? 'shopping-cart show-cart' : 'shopping-cart'}>
             <button onClick={handleToggle}className={!displayCart ?'close-cart shopping-cart' : 'close-cart'}>X</button>
-            <h3>nvde</h3>
-            <p>in your cart</p>
+            <div className="cart-logo">
+              <h3>nvde</h3>
+              <p>shopping cart</p>
+            </div>
+            <div className="soap-in-cart">
             {
               soapProducts.filter(item => item.inCart > 0)
                 .map((soapInCart, index) => (
@@ -103,9 +103,12 @@ function App() {
                   />
                 ))
             }
+              <p className='total'>total: </p>
+
+              <button className='order'><a href="https://www.instagram.com/nvde.soap/">order</a></button>
+            </div>
           </aside>
         </div>
-        
       </main>
       
       <Footer />
