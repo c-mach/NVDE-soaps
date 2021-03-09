@@ -24,10 +24,21 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  padding: 0 2px;
+  font-weight: 700;
+
+  &:hover,
+  &:focus {
+    color: rgb(204, 146, 132);
+  }
+}
+
 .wrapper {
   width: 80%;
   margin: 0 auto;
-
 }
 
 
@@ -61,6 +72,11 @@ button {
   top: 0;
   right: 0;
   box-shadow: 4px 4px #75341d;
+
+  &:hover {
+    background-color: #75341d;
+    color: white;
+  }
 
   &:active,
   &:focus {
@@ -137,7 +153,18 @@ li.available-soaps {
   }
 }
 
+.image-container {
+  width: calc(30% - 15px);
+  min-width: 185px;
+  
+  img {
+    min-height: 250px; 
+  }
+}
+
+
 .text-container {
+  width: 70%;
   margin-left: 15px;
   background-color:  #A75638;
   padding: 20px 30px;
