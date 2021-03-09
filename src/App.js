@@ -85,24 +85,25 @@ function App() {
           </div>  
         </div> 
 
-
-        <div className={displayCart ? 'shopping-cart show-cart' : 'shopping-cart'}>
-          <button onClick={handleToggle}className={!displayCart ?'close-cart shopping-cart' : 'close-cart'}>X</button>
-          <h3>nvde</h3>
-          <p>in your cart</p>
-          {
-            soapProducts.filter(item => item.inCart > 0)
-              .map((soapInCart, index) => (
-                <ShoppingCart 
-                  key={`${index}-${soapInCart.name}`}
-                  soapName={soapInCart.name}
-                  soapTitle={soapInCart.title}
-                  amountInCart={soapInCart.inCart}
-                  price={soapInCart.price}
-                  removeFromCart={handleRemove}
-                />
-              ))
-          }
+        <div className={displayCart ? 'cart-container' : ''}>
+          <aside className={displayCart ? 'shopping-cart show-cart' : 'shopping-cart'}>
+            <button onClick={handleToggle}className={!displayCart ?'close-cart shopping-cart' : 'close-cart'}>X</button>
+            <h3>nvde</h3>
+            <p>in your cart</p>
+            {
+              soapProducts.filter(item => item.inCart > 0)
+                .map((soapInCart, index) => (
+                  <ShoppingCart 
+                    key={`${index}-${soapInCart.name}`}
+                    soapName={soapInCart.name}
+                    soapTitle={soapInCart.title}
+                    amountInCart={soapInCart.inCart}
+                    price={soapInCart.price}
+                    removeFromCart={handleRemove}
+                  />
+                ))
+            }
+          </aside>
         </div>
         
       </main>

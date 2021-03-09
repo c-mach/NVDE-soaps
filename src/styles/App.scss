@@ -207,6 +207,16 @@ li.available-soaps {
 
 // shopping cart component starts
 
+.cart-container {
+  height: 100vh;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
 .shopping-cart {
   display: flex;
   flex-direction: column;
@@ -233,6 +243,8 @@ li.available-soaps {
     width: auto;
     padding: 5px 8px;
   }
+
+  
 }
 
 // main ends
