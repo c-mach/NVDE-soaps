@@ -4,7 +4,7 @@ const Gallery = (props) => {
         <ul>
             <li className='available-soaps'>
                 <div className="image-container">
-                    <img src={picture} alt="Hand crafed soap"/>
+                    <img src={picture} alt={`Hand crafed ${soapTitle} soap`}/>
                 </div>
                 <div className="text-container">
                     <h3>{soapTitle}</h3>
