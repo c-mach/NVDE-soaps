@@ -144,7 +144,6 @@ h2 {
   }
 }
 
-
 // gallery component start
 
 .soap-container {
@@ -170,7 +169,6 @@ li.available-soaps {
   border-radius: 10px;
   transition: box-shadow 0.3s;
   color: white;
-
 
   &:hover {
     box-shadow: 0 0 40px rgba(248, 237, 235, 1);
@@ -353,9 +351,15 @@ footer {
   padding: 5px;
   color: white;
   background-color: #B15B28;
+  display: flex;
+  justify-content: center;
 
   a {
     color: white;
+  }
+
+  p{
+    margin: 0 5px;
   }
 }
 
