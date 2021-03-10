@@ -64,6 +64,9 @@ function App() {
           <section className='soap-container'>
             <h2>Available Soaps:</h2>
             {
+              (soapProducts.length === 0) 
+                ? <p>sorry, we are restocking right now! check back later or visit us on <a href="https://www.instagram.com/nvde.soap/">Instagram</a>.</p>
+              :
               soapProducts.map((item, index) => {
                 return (
                   <Gallery 
