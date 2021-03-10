@@ -1,0 +1,23 @@
+@mixin largeTabletMQ {
+    @media screen and (max-width: 760px) {
+        @content;
+    }
+}
+
+@mixin medTabletMQ {
+    @media screen and (max-width: 620px) {
+        @content;
+    }
+}
+
+@mixin smallTabletMQ {
+    @media screen and (max-width: 520px) {
+        @content;
+    }
+}
+
+@mixin mobileMQ {
+    @media screen and (max-width: 520px) {
+        @content;
+    }
+}

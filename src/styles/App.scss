@@ -1,5 +1,5 @@
 @import 'setup';
-@import 'mediaqueries';
+@import 'mixins';
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap');
 
 
@@ -32,6 +32,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   color: #5a2917;
+  text-transform: lowercase;
 }
 
 img {
@@ -43,6 +44,7 @@ a {
   text-decoration: none;
   padding: 0 2px;
   font-weight: 700;
+  color: white;
 
   &:hover,
   &:focus {
@@ -54,6 +56,10 @@ a {
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
+
+  @include largeTabletMQ {
+    width: 90%;
+  }
 
 }
 
@@ -102,6 +108,10 @@ header {
     font-size: 20rem;
     font-weight: 700;
     padding: 25px 0 15px 100px;
+
+    @include medTabletMQ {
+      padding-left: 10%;
+    }
   }
 
   p {
@@ -109,6 +119,10 @@ header {
     margin: 5px;
     font-size: 2.2rem;
     font-weight: 600;
+
+  @include medTabletMQ {
+    padding-left: 10%;
+  }
 
   }
 } // header ends
@@ -152,6 +166,10 @@ h2 {
   align-items: center;
   padding: 10px;
 
+  @include largeTabletMQ {
+    padding: 0;
+  }
+
   h2 {
     text-align: center;
     padding: 20px 0;
@@ -173,15 +191,30 @@ li.available-soaps {
   &:hover {
     box-shadow: 0 0 40px rgba(248, 237, 235, 1);
   }
+
+  @include smallTabletMQ {
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 
 .image-container {
   width: calc(30% - 15px);
   min-width: 185px;
+ 
   
   img {
     min-height: 250px; 
   }
+
+  @include smallTabletMQ {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    background-color: #A75638;
+    padding-top: 20px;
+  }  
 }
 
 .text-container {
@@ -192,11 +225,20 @@ li.available-soaps {
   display: flex;
   flex-direction: column;
 
+  @include smallTabletMQ {
+    width: 100%;
+    margin: auto;
+  }
+
   h3 {
     font-family: 'Dancing Script', cursive;
     font-size: 4.7rem;
     font-weight: 700;
     text-transform: lowercase;
+
+    @include medTabletMQ {
+      font-size: 4rem;
+    }
   }
 
   p {
@@ -205,6 +247,10 @@ li.available-soaps {
 
   .ingredient-list {
     width: 75%;
+
+    @include largeTabletMQ {
+      width: 100%;
+    }
   }
 
   .cost {
@@ -215,6 +261,11 @@ li.available-soaps {
 
   button {
     align-self: flex-end;
+
+    @include medTabletMQ {
+      margin-top: 10px;
+      width: 100%;
+    }
   }
 }
 
@@ -222,7 +273,12 @@ li.available-soaps {
 
 .checkout {
   width: 25%;
-  margin: 15px 0;
+  margin-top: 15px;
+  margin-bottom: 30px;
+
+  @include smallTabletMQ {
+    width: 50%;
+  }
 }
 
 // shopping cart component starts
@@ -253,6 +309,14 @@ li.available-soaps {
   transition: transform 0.6s ease;
   padding: 30px;
   color: #5a2917;
+
+  @include largeTabletMQ {
+    width: 80%;
+  }
+
+  @include smallTabletMQ {
+    width: 100%;
+  }
 
   &.show-cart {
     visibility: visible;
@@ -360,6 +424,10 @@ footer {
 
   p{
     margin: 0 5px;
+  }
+
+  @include mobileMQ {
+    flex-direction: column;
   }
 }
 

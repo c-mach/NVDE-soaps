@@ -89,7 +89,7 @@ function App() {
                 )
               })
             }
-            <button className='checkout' onClick={handleToggle}>check out</button>
+            <button className='checkout' onClick={handleToggle}>checkout</button>
           </section>  
         </div> 
 
