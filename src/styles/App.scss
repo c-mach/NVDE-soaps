@@ -107,6 +107,16 @@ header {
   background-position-x: 1%;
   height: 75vh;
   color: white;
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      margin: 10px;
+    }
+
+  }
   
   h1 {
     font-family: 'Dancing Script', cursive;
@@ -116,6 +126,10 @@ header {
 
     @include medTabletMQ {
       padding-left: 10%;
+    }
+
+    @include smallMobileMQ {
+      font-size: 15rem;
     }
   }
 
