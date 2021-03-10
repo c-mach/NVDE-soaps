@@ -60,9 +60,17 @@ function App() {
       <Header />
 
       <main>
+        <section className="about">
+          <div className='about-container wrapper'>
+            <h2>about</h2>
+            <p>nvde (pronounced “nude”) soaps are small batch soaps with the most organic ingredients used possible for the most natural product. no nasty harmful chemicals that take away from your skins natural health. a product that is completely nude of all chemicals and harmful products. </p>
+
+            <p>we care about what goes into our everyday cleansing routines and make an effort towards sustainable living, natural soap is an easy switch for your body cleansing products. </p>
+          </div>
+        </section>
         <div className='wrapper'>
           <section className='soap-container'>
-            <h2>Available Soaps:</h2>
+            <h2>available soaps</h2>
             {
               (soapProducts.length === 0) 
                 ? <p>sorry, we are restocking right now! check back later or visit us on <a href="https://www.instagram.com/nvde.soap/">Instagram</a>.</p>
@@ -108,7 +116,7 @@ function App() {
             }
               <p className='total'>total: </p>
 
-              <button className='order'><a href="https://www.instagram.com/nvde.soap/">order</a></button>
+              <a href="https://www.instagram.com/nvde.soap/"><button className='order'>order</button></a>
             </div>
           </aside>
         </div>
